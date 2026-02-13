@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    <div class="progress" id="progress"></div>
+    <div class="ticker"><span>Monitoring 3,400+ endpoints | SOC staffed 24/7 | Avg response 15 minutes | Quarterly roadmap reviews</span><span>Monitoring 3,400+ endpoints | SOC staffed 24/7 | Avg response 15 minutes | Quarterly roadmap reviews</span></div>
     <header class="header">
       <div class="wrap nav">
         <div class="logo">ByteCrafters IT Services</div>
@@ -48,6 +50,7 @@
           <ul><li>Immutable backups</li><li>Disaster recovery testing</li><li>Recovery runbooks</li></ul>
         </article>
         </div></section>
+    <section class="section"><div class="wrap grid-3"><div class="step"><h3>Assess</h3><p>Inventory assets and identify risks.</p></div><div class="step"><h3>Harden</h3><p>Deploy controls and automate response workflows.</p></div><div class="step"><h3>Operate</h3><p>Monitor, report, and continually optimize.</p></div></div></section>
     
 
     <footer class="footer">
@@ -57,6 +60,19 @@
         <div><h4>Coverage</h4><p>24/7 support with staffed SOC</p></div>
       </div>
     </footer>
+    
+
+    <script>
+      const bar = document.getElementById('progress');
+      const update = () => {
+        const scroll = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const width = height ? (scroll / height) * 100 : 0;
+        bar.style.width = width + '%';
+      };
+      window.addEventListener('scroll', update);
+      update();
+    </script>
     
 </body>
 </html>

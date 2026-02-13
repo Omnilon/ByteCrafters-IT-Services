@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    <div class="progress" id="progress"></div>
+    <div class="ticker"><span>Monitoring 3,400+ endpoints | SOC staffed 24/7 | Avg response 15 minutes | Quarterly roadmap reviews</span><span>Monitoring 3,400+ endpoints | SOC staffed 24/7 | Avg response 15 minutes | Quarterly roadmap reviews</span></div>
     <header class="header">
       <div class="wrap nav">
         <div class="logo">ByteCrafters IT Services</div>
@@ -18,23 +20,21 @@
     
 
     <section class="section"><div class="wrap grid-3"><div class="step"><h3>Assessment</h3><p>We inventory assets and security posture.</p></div><div class="step"><h3>Roadmap</h3><p>Prioritized improvements with timelines and costs.</p></div><div class="step"><h3>Onboarding</h3><p>Rollout of monitoring, support, and security controls.</p></div></div></section>
-    <section class="section">
-      <div class="wrap grid-3">
-        <div class="panel">
-          <h2>Assessment request</h2>
-          <form>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Environment details"></textarea>
-            <button class="button" type="submit">Submit</button>
-          </form>
-        </div>
-        <div class="panel">
-          <h2>FAQ</h2>
-          <div class="faq"><h3>Do you support hybrid teams?</h3><p>Yes, we support remote and onsite environments with secure access.</p></div><div class="faq"><h3>How quickly can you onboard?</h3><p>Most clients are fully onboarded within 30 days.</p></div><div class="faq"><h3>Do you provide compliance support?</h3><p>We help with HIPAA, SOC 2, and PCI readiness.</p></div>
-        </div>
+    <section class="section"><div class="wrap grid-3">
+      <div class="panel">
+        <h2>Assessment request</h2>
+        <form>
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <textarea placeholder="Environment details"></textarea>
+          <button class="button" type="submit">Submit</button>
+        </form>
       </div>
-    </section>
+      <div class="panel">
+        <h2>FAQ</h2>
+        <div class="faq"><h3>Do you support hybrid teams?</h3><p>Yes, we support remote and onsite environments with secure access.</p></div><div class="faq"><h3>How quickly can you onboard?</h3><p>Most clients are fully onboarded within 30 days.</p></div><div class="faq"><h3>Do you provide compliance support?</h3><p>We help with HIPAA, SOC 2, and PCI readiness.</p></div>
+      </div>
+    </div></section>
     
 
     <footer class="footer">
@@ -44,6 +44,19 @@
         <div><h4>Coverage</h4><p>24/7 support with staffed SOC</p></div>
       </div>
     </footer>
+    
+
+    <script>
+      const bar = document.getElementById('progress');
+      const update = () => {
+        const scroll = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const width = height ? (scroll / height) * 100 : 0;
+        bar.style.width = width + '%';
+      };
+      window.addEventListener('scroll', update);
+      update();
+    </script>
     
 </body>
 </html>

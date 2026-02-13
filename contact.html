@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    <div class="progress" id="progress"></div>
+    <div class="ticker"><span>Monitoring 3,400+ endpoints | SOC staffed 24/7 | Avg response 15 minutes | Quarterly roadmap reviews</span><span>Monitoring 3,400+ endpoints | SOC staffed 24/7 | Avg response 15 minutes | Quarterly roadmap reviews</span></div>
     <header class="header">
       <div class="wrap nav">
         <div class="logo">ByteCrafters IT Services</div>
@@ -17,13 +19,11 @@
     </header>
     
 
-    <section class="section">
-      <div class="wrap grid-3">
-        <div class="panel"><h3>Office</h3><p>501 Congress Ave, Suite 900, Austin, TX 78701</p></div>
-        <div class="panel"><h3>Email</h3><p>hello@bytecraftersit.com</p></div>
-        <div class="panel"><h3>Phone</h3><p>(512) 555-0138</p></div>
-      </div>
-    </section>
+    <section class="section"><div class="wrap grid-3">
+      <div class="panel"><h3>Office</h3><p>501 Congress Ave, Suite 900, Austin, TX 78701</p></div>
+      <div class="panel"><h3>Email</h3><p>hello@bytecraftersit.com</p></div>
+      <div class="panel"><h3>Phone</h3><p>(512) 555-0138</p></div>
+    </div></section>
     
 
     <footer class="footer">
@@ -33,6 +33,19 @@
         <div><h4>Coverage</h4><p>24/7 support with staffed SOC</p></div>
       </div>
     </footer>
+    
+
+    <script>
+      const bar = document.getElementById('progress');
+      const update = () => {
+        const scroll = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const width = height ? (scroll / height) * 100 : 0;
+        bar.style.width = width + '%';
+      };
+      window.addEventListener('scroll', update);
+      update();
+    </script>
     
 </body>
 </html>

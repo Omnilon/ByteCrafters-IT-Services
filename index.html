@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    <div class="progress" id="progress"></div>
+    <div class="ticker"><span>Monitoring 3,400+ endpoints | SOC staffed 24/7 | Avg response 15 minutes | Quarterly roadmap reviews</span><span>Monitoring 3,400+ endpoints | SOC staffed 24/7 | Avg response 15 minutes | Quarterly roadmap reviews</span></div>
     <header class="header">
       <div class="wrap nav">
         <div class="logo">ByteCrafters IT Services</div>
@@ -88,6 +90,12 @@
       <figcaption>Sophie Reed - CEO, Cobalt Health</figcaption>
     </figure>
     </div></section>
+
+    <section class="section"><div class="wrap grid-3">
+      <div class="card"><h3>Release notes</h3><p>2024 Q4: Zero trust rollout pack.</p></div>
+      <div class="card"><h3>Security bulletin</h3><p>Weekly threat digest for client teams.</p></div>
+      <div class="card"><h3>Uptime log</h3><p>Rolling 12 month SLA report available.</p></div>
+    </div></section>
     
 
     <footer class="footer">
@@ -97,6 +105,19 @@
         <div><h4>Coverage</h4><p>24/7 support with staffed SOC</p></div>
       </div>
     </footer>
+    
+
+    <script>
+      const bar = document.getElementById('progress');
+      const update = () => {
+        const scroll = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const width = height ? (scroll / height) * 100 : 0;
+        bar.style.width = width + '%';
+      };
+      window.addEventListener('scroll', update);
+      update();
+    </script>
     
 </body>
 </html>
