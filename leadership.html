@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ByteCrafters IT Services | Leadership</title>
+  <meta name="telegram-endpoint" content="https://YOUR_TELEGRAM_PROXY_ENDPOINT">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
-<body class="page-leadership">
+<body class="page-leadership" data-site="ByteCrafters IT Services">
   <header class="site-header">
     <div class="brand"><img class="brand-logo" src="assets/logo.png" alt="ByteCrafters logo">ByteCrafters</div>
     <nav class="primary-nav">
@@ -73,5 +74,6 @@
     window.addEventListener('scroll', updateProgress, { passive: true });
     updateProgress();
   </script>
+  <script src="telegram-form.js" defer></script>
 </body>
 </html>
