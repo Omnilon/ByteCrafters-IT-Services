@@ -1,123 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ByteCrafters IT Services - Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ByteCrafters IT Services | Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-index">
+  <header class="site-header">
+    <div class="brand">ByteCrafters</div>
+    <nav class="primary-nav">
+      <a href="index.html" data-page="index">Explore</a>
+      <a href="about.html" data-page="about">Story</a>
+      <a href="services.html" data-page="services">Services</a>
+      <a href="mission.html" data-page="mission">Mission</a>
+      <a href="leadership.html" data-page="leadership">Guides</a>
+      <a href="careers.html" data-page="careers">Careers</a>
+      <a href="contact.html" data-page="contact">Contact</a>
+      <a href="consult.html" data-page="consult">Inquire</a>
+    </nav>
+    <a class="inquire-btn" href="consult.html">Inquire</a>
+  </header>
+  <button class="audio-toggle" type="button">Audio off</button>
+  <main class="storybook">
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80');">
+  <div class="hero-content">
+    <h1>In the heart of your digital terrain.</h1>
+    <p>ByteCrafters builds resilient IT ecosystems that keep your business moving, from cloud ridgelines to on-premise valleys.</p>
+  </div>
+</section>
+<section class="story" style="background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1600&q=80');">
+  <div class="story-content">
+    <h2>Explore the map</h2>
+    <p>Follow our guided routes across cloud migration, security hardening, and managed support.</p>
+  </div>
+</section>
+<section class="story" style="background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');">
+  <div class="story-content">
+    <h2>Summit command</h2>
+    <p>24/7 monitoring, incident response, and infrastructure tuning for high-growth teams.</p>
+  </div>
+</section>
+<section class="story" style="background-image: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80');">
+  <div class="story-content">
+    <h2>Forest routes</h2>
+    <p>We navigate vendor ecosystems, device fleets, and endpoint security with local precision.</p>
+  </div>
+</section>
+<section class="section">
+  <h2>Service map</h2>
+  <div class="map">
+    <div class="map-card"><span>Route 01</span><h3>Managed IT Lodge</h3><p>Always-on support, asset management, and lifecycle planning.</p></div>
+    <div class="map-card"><span>Route 02</span><h3>Cloud Ascent</h3><p>Migration planning and cloud cost optimization.</p></div>
+    <div class="map-card"><span>Route 03</span><h3>Security Ridge</h3><p>Zero-trust rollouts, penetration testing, and compliance.</p></div>
+    <div class="map-card"><span>Route 04</span><h3>Data Lake Retreat</h3><p>Backup architecture, disaster recovery, and data resilience.</p></div>
+  </div>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div>
+      ByteCrafters IT Services<br>
+      240 Summit Ridge Drive<br>
+      Asheville, NC 28801
+    </div>
+    <div>
+      hello@bytecrafters.io<br>
+      +1 (828) 555-0176
+    </div>
+    <div>
+      24/7 managed services<br>
+      Response SLA: 30 minutes
+    </div>
+  </footer>
 
-    <div class="progress" id="progress"></div>
-    <div class="ticker"><span>Monitoring 3,400+ endpoints | SOC staffed 24/7 | Avg response 15 minutes | Quarterly roadmap reviews</span><span>Monitoring 3,400+ endpoints | SOC staffed 24/7 | Avg response 15 minutes | Quarterly roadmap reviews</span></div>
-    <header class="header">
-      <div class="wrap nav">
-        <div class="logo">ByteCrafters IT Services</div>
-        <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="mission.html">Mission</a><a href="leadership.html">Leadership</a><a href="services.html">Services</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="consult.html">Consult</a></div>
-        <div class="status-pill"><span class="status-dot"></span> Support online</div>
-      </div>
-    </header>
-    
-
-    <section class="hero wrap">
-      <div>
-        <h1>Managed IT that feels in-house.</h1>
-        <p>We combine responsive help desk support with strategic IT planning to keep your systems secure and scalable.</p>
-        <div class="actions">
-          <a class="button" href="services.html">See our services</a>
-          <a class="button ghost" href="contact.html">Talk to support</a>
-        </div>
-      </div>
-      <div class="panel scanline">
-        <h3>Live status</h3>
-        <p class="metric">99.98%</p>
-        <p>Average uptime across client environments.</p>
-        <div class="code">SOC: green | Alerts: 2 | Response: 12m</div>
-      </div>
-    </section>
-
-    <section class="section"><div class="wrap grid-3">
-        <article class="card">
-          <h3>Managed IT Support</h3>
-          <p>Full lifecycle support for endpoints, networks, and SaaS apps.</p>
-          <ul><li>Unlimited remote support</li><li>Onsite response options</li><li>Asset lifecycle tracking</li></ul>
-        </article>
-        
-        <article class="card">
-          <h3>Cybersecurity</h3>
-          <p>Layered defenses to prevent, detect, and respond to threats.</p>
-          <ul><li>24/7 SOC</li><li>MDR and SIEM</li><li>Security awareness training</li></ul>
-        </article>
-        
-        <article class="card">
-          <h3>Cloud Migration</h3>
-          <p>Move critical workloads to modern cloud infrastructure.</p>
-          <ul><li>Azure and AWS readiness</li><li>Identity management</li><li>Cost optimization</li></ul>
-        </article>
-        </div></section>
-    <section class="section"><div class="wrap grid-3">
-    <article class="card">
-      <h3>Brightline Logistics</h3>
-      <p>Help desk consolidation and network overhaul.</p>
-      <p><strong>Result:</strong> 40% reduction in ticket volume.</p>
-    </article>
-    
-    <article class="card">
-      <h3>Cedar Ridge Finance</h3>
-      <p>Security program with MFA and MDR rollout.</p>
-      <p><strong>Result:</strong> Zero critical incidents in 18 months.</p>
-    </article>
-    
-    <article class="card">
-      <h3>Cobalt Health</h3>
-      <p>Cloud migration and compliance readiness.</p>
-      <p><strong>Result:</strong> HIPAA audit passed with no findings.</p>
-    </article>
-    </div></section>
-    <section class="section"><div class="wrap grid-3">
-    <figure class="quote">
-      <blockquote>ByteCrafters feels like our internal IT team. Response times are incredibly fast.</blockquote>
-      <figcaption>Jillian Grant - COO, Brightline Logistics</figcaption>
-    </figure>
-    
-    <figure class="quote">
-      <blockquote>Their security team helped us lock down our environment in weeks, not months.</blockquote>
-      <figcaption>Omar Patel - CISO, Cedar Ridge Finance</figcaption>
-    </figure>
-    
-    <figure class="quote">
-      <blockquote>We finally have a predictable IT roadmap and budget.</blockquote>
-      <figcaption>Sophie Reed - CEO, Cobalt Health</figcaption>
-    </figure>
-    </div></section>
-
-    <section class="section"><div class="wrap grid-3">
-      <div class="card"><h3>Release notes</h3><p>2024 Q4: Zero trust rollout pack.</p></div>
-      <div class="card"><h3>Security bulletin</h3><p>Weekly threat digest for client teams.</p></div>
-      <div class="card"><h3>Uptime log</h3><p>Rolling 12 month SLA report available.</p></div>
-    </div></section>
-    
-
-    <footer class="footer">
-      <div class="wrap grid-3">
-        <div><h3>ByteCrafters IT Services</h3><p>Secure, modern IT for growing teams.</p></div>
-        <div><h4>Contact</h4><p>hello@bytecraftersit.com<br>(512) 555-0138</p></div>
-        <div><h4>Coverage</h4><p>24/7 support with staffed SOC</p></div>
-      </div>
-    </footer>
-    
-
-    <script>
-      const bar = document.getElementById('progress');
-      const update = () => {
-        const scroll = document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const width = height ? (scroll / height) * 100 : 0;
-        bar.style.width = width + '%';
-      };
-      window.addEventListener('scroll', update);
-      update();
-    </script>
-    
+  <script>
+    const audioBtn = document.querySelector('.audio-toggle');
+    if (audioBtn) {
+      audioBtn.addEventListener('click', () => {
+        audioBtn.classList.toggle('off');
+        audioBtn.textContent = audioBtn.classList.contains('off') ? 'Audio on' : 'Audio off';
+      });
+    }
+  </script>
 </body>
 </html>

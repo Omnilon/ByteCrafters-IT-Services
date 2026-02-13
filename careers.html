@@ -1,48 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ByteCrafters IT Services - Careers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ByteCrafters IT Services | Careers</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-careers">
+  <header class="site-header">
+    <div class="brand">ByteCrafters</div>
+    <nav class="primary-nav">
+      <a href="index.html" data-page="index">Explore</a>
+      <a href="about.html" data-page="about">Story</a>
+      <a href="services.html" data-page="services">Services</a>
+      <a href="mission.html" data-page="mission">Mission</a>
+      <a href="leadership.html" data-page="leadership">Guides</a>
+      <a href="careers.html" data-page="careers">Careers</a>
+      <a href="contact.html" data-page="contact">Contact</a>
+      <a href="consult.html" data-page="consult">Inquire</a>
+    </nav>
+    <a class="inquire-btn" href="consult.html">Inquire</a>
+  </header>
+  <button class="audio-toggle" type="button">Audio off</button>
+  <main class="storybook">
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80');">
+  <div class="hero-content">
+    <h1>Join the trail crew.</h1>
+    <p>We are hiring engineers, service leads, and client experience specialists.</p>
+  </div>
+</section>
+<section class="section">
+  <h2>Open roles</h2>
+  <div class="map">
+    <div class="map-card"><span>Remote</span><h3>Security Analyst</h3><p>Threat monitoring and incident response support.</p></div>
+    <div class="map-card"><span>Asheville</span><h3>Systems Engineer</h3><p>Infrastructure projects and cloud migrations.</p></div>
+    <div class="map-card"><span>Remote</span><h3>Client Success Lead</h3><p>Onboarding and relationship management.</p></div>
+  </div>
+</section>
+  </main>
+  <footer class="site-footer">
+    <div>
+      ByteCrafters IT Services<br>
+      240 Summit Ridge Drive<br>
+      Asheville, NC 28801
+    </div>
+    <div>
+      hello@bytecrafters.io<br>
+      +1 (828) 555-0176
+    </div>
+    <div>
+      24/7 managed services<br>
+      Response SLA: 30 minutes
+    </div>
+  </footer>
 
-    <div class="progress" id="progress"></div>
-    <div class="ticker"><span>Monitoring 3,400+ endpoints | SOC staffed 24/7 | Avg response 15 minutes | Quarterly roadmap reviews</span><span>Monitoring 3,400+ endpoints | SOC staffed 24/7 | Avg response 15 minutes | Quarterly roadmap reviews</span></div>
-    <header class="header">
-      <div class="wrap nav">
-        <div class="logo">ByteCrafters IT Services</div>
-        <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="mission.html">Mission</a><a href="leadership.html">Leadership</a><a href="services.html">Services</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="consult.html">Consult</a></div>
-        <div class="status-pill"><span class="status-dot"></span> Support online</div>
-      </div>
-    </header>
-    
-
-    <section class="section"><div class="wrap grid-3"><div class="tile"><h3>Certification reimbursement</h3><p></p></div><div class="tile"><h3>Remote-first flexibility</h3><p></p></div><div class="tile"><h3>Home office stipend</h3><p></p></div><div class="tile"><h3>On-call compensation and wellness days</h3><p></p></div></div></section>
-    <section class="section"><div class="wrap grid-3"><div class="step"><h3>Security Analyst</h3><p>Monitor alerts and lead incident response.</p></div><div class="step"><h3>Help Desk Lead</h3><p>Manage support queue and mentor junior techs.</p></div><div class="step"><h3>Cloud Engineer</h3><p>Design migrations and optimize cloud spend.</p></div></div></section>
-    
-
-    <footer class="footer">
-      <div class="wrap grid-3">
-        <div><h3>ByteCrafters IT Services</h3><p>Secure, modern IT for growing teams.</p></div>
-        <div><h4>Contact</h4><p>hello@bytecraftersit.com<br>(512) 555-0138</p></div>
-        <div><h4>Coverage</h4><p>24/7 support with staffed SOC</p></div>
-      </div>
-    </footer>
-    
-
-    <script>
-      const bar = document.getElementById('progress');
-      const update = () => {
-        const scroll = document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const width = height ? (scroll / height) * 100 : 0;
-        bar.style.width = width + '%';
-      };
-      window.addEventListener('scroll', update);
-      update();
-    </script>
-    
+  <script>
+    const audioBtn = document.querySelector('.audio-toggle');
+    if (audioBtn) {
+      audioBtn.addEventListener('click', () => {
+        audioBtn.classList.toggle('off');
+        audioBtn.textContent = audioBtn.classList.contains('off') ? 'Audio on' : 'Audio off';
+      });
+    }
+  </script>
 </body>
 </html>
