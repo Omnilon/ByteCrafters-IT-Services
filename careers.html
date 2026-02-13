@@ -5,39 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ByteCrafters IT Services | Careers</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body class="page-careers">
   <header class="site-header">
-    <div class="brand">ByteCrafters</div>
+    <div class="brand"><img class="brand-logo" src="assets/logo.png" alt="ByteCrafters logo">ByteCrafters</div>
     <nav class="primary-nav">
-      <a href="index.html" data-page="index">Explore</a>
-      <a href="about.html" data-page="about">Story</a>
-      <a href="services.html" data-page="services">Services</a>
-      <a href="mission.html" data-page="mission">Mission</a>
-      <a href="leadership.html" data-page="leadership">Guides</a>
-      <a href="careers.html" data-page="careers">Careers</a>
-      <a href="contact.html" data-page="contact">Contact</a>
-      <a href="consult.html" data-page="consult">Inquire</a>
+      <a href="index.html" data-page="index">[ command ]</a>
+      <a href="about.html" data-page="about">about</a>
+      <a href="services.html" data-page="services">programs</a>
+      <a href="mission.html" data-page="mission">mission</a>
+      <a href="leadership.html" data-page="leadership">team</a>
+      <a href="careers.html" data-page="careers">careers</a>
+      <a href="contact.html" data-page="contact">contact</a>
+      <a href="consult.html" data-page="consult">consult</a>
     </nav>
-    <a class="inquire-btn" href="consult.html">Inquire</a>
   </header>
-  <button class="audio-toggle" type="button">Audio off</button>
-  <main class="storybook">
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80');">
-  <div class="hero-content">
-    <h1>Join the trail crew.</h1>
-    <p>We are hiring engineers, service leads, and client experience specialists.</p>
+  <div class="progress" id="scroll-progress">0%</div>
+  <main>
+    <section class="hero">
+  <div>
+    <div class="bracket">[ careers ]</div>
+    <h1>Join the control room.</h1>
   </div>
+  <div>
+    <p>We are hiring engineers, analysts, and client operations specialists.</p>
+  </div>
+  <div class="hero-media" style="background-image: url('assets/hero-2.png');"></div>
 </section>
-<section class="section">
-  <h2>Open roles</h2>
-  <div class="map">
-    <div class="map-card"><span>Remote</span><h3>Security Analyst</h3><p>Threat monitoring and incident response support.</p></div>
-    <div class="map-card"><span>Asheville</span><h3>Systems Engineer</h3><p>Infrastructure projects and cloud migrations.</p></div>
-    <div class="map-card"><span>Remote</span><h3>Client Success Lead</h3><p>Onboarding and relationship management.</p></div>
+<section>
+  <div class="grid">
+    <div class="card"><h3>Security Analyst</h3><p>Remote. Threat monitoring and response support.</p></div>
+    <div class="card"><h3>Systems Engineer</h3><p>Asheville. Infrastructure projects and migrations.</p></div>
+    <div class="card"><h3>Client Success Lead</h3><p>Remote. Onboarding and relationship management.</p></div>
   </div>
 </section>
   </main>
+  <div class="ticker">
+    <div class="ticker-track">BYTECRAFTERS // COMMAND CENTER // SECURITY CORE // BYTECRAFTERS // COMMAND CENTER // SECURITY CORE //</div>
+  </div>
   <footer class="site-footer">
     <div>
       ByteCrafters IT Services<br>
@@ -53,15 +59,17 @@
       Response SLA: 30 minutes
     </div>
   </footer>
-
   <script>
-    const audioBtn = document.querySelector('.audio-toggle');
-    if (audioBtn) {
-      audioBtn.addEventListener('click', () => {
-        audioBtn.classList.toggle('off');
-        audioBtn.textContent = audioBtn.classList.contains('off') ? 'Audio on' : 'Audio off';
-      });
-    }
+    const progress = document.getElementById('scroll-progress');
+    const updateProgress = () => {
+      const h = document.documentElement;
+      const scrolled = h.scrollTop || document.body.scrollTop;
+      const height = h.scrollHeight - h.clientHeight;
+      const pct = height ? Math.round((scrolled / height) * 100) : 0;
+      progress.textContent = pct + '%';
+    };
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
   </script>
 </body>
 </html>

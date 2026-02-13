@@ -5,40 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ByteCrafters IT Services | Services</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body class="page-services">
   <header class="site-header">
-    <div class="brand">ByteCrafters</div>
+    <div class="brand"><img class="brand-logo" src="assets/logo.png" alt="ByteCrafters logo">ByteCrafters</div>
     <nav class="primary-nav">
-      <a href="index.html" data-page="index">Explore</a>
-      <a href="about.html" data-page="about">Story</a>
-      <a href="services.html" data-page="services">Services</a>
-      <a href="mission.html" data-page="mission">Mission</a>
-      <a href="leadership.html" data-page="leadership">Guides</a>
-      <a href="careers.html" data-page="careers">Careers</a>
-      <a href="contact.html" data-page="contact">Contact</a>
-      <a href="consult.html" data-page="consult">Inquire</a>
+      <a href="index.html" data-page="index">[ command ]</a>
+      <a href="about.html" data-page="about">about</a>
+      <a href="services.html" data-page="services">programs</a>
+      <a href="mission.html" data-page="mission">mission</a>
+      <a href="leadership.html" data-page="leadership">team</a>
+      <a href="careers.html" data-page="careers">careers</a>
+      <a href="contact.html" data-page="contact">contact</a>
+      <a href="consult.html" data-page="consult">consult</a>
     </nav>
-    <a class="inquire-btn" href="consult.html">Inquire</a>
   </header>
-  <button class="audio-toggle" type="button">Audio off</button>
-  <main class="storybook">
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80');">
-  <div class="hero-content">
-    <h1>Guided IT services.</h1>
-    <p>Choose a route or combine them into a multi-quarter transformation.</p>
+  <div class="progress" id="scroll-progress">0%</div>
+  <main>
+    <section class="hero">
+  <div>
+    <div class="bracket">[ programs ]</div>
+    <h1>Programs tuned for uptime and security.</h1>
   </div>
+  <div>
+    <p>From day-one IT setups to complex enterprise migrations, our programs deliver consistent operational confidence.</p>
+  </div>
+  <div class="hero-media" style="background-image: url('assets/hero-1.png');"></div>
 </section>
-<section class="section">
-  <h2>Our routes</h2>
-  <div class="map">
-    <div class="map-card"><span>Summit</span><h3>Managed services</h3><p>24/7 monitoring, patching, and device management.</p></div>
-    <div class="map-card"><span>Ridge</span><h3>Security</h3><p>Endpoint hardening, SOC partnerships, and compliance.</p></div>
-    <div class="map-card"><span>Valley</span><h3>Cloud</h3><p>Migrations, cost optimization, and cloud-native architecture.</p></div>
-    <div class="map-card"><span>Stream</span><h3>Data protection</h3><p>Backups, disaster recovery, and continuity drills.</p></div>
+<section>
+  <div class="grid">
+    <div class="card"><h3>Managed IT</h3><p>Help desk, device management, and vendor coordination.</p></div>
+    <div class="card"><h3>Security operations</h3><p>Threat monitoring, response, and compliance tracking.</p></div>
+    <div class="card"><h3>Cloud migration</h3><p>Planning, execution, and infrastructure optimization.</p></div>
+    <div class="card"><h3>Business continuity</h3><p>Disaster recovery planning and tabletop exercises.</p></div>
   </div>
 </section>
   </main>
+  <div class="ticker">
+    <div class="ticker-track">BYTECRAFTERS // COMMAND CENTER // SECURITY CORE // BYTECRAFTERS // COMMAND CENTER // SECURITY CORE //</div>
+  </div>
   <footer class="site-footer">
     <div>
       ByteCrafters IT Services<br>
@@ -54,15 +60,17 @@
       Response SLA: 30 minutes
     </div>
   </footer>
-
   <script>
-    const audioBtn = document.querySelector('.audio-toggle');
-    if (audioBtn) {
-      audioBtn.addEventListener('click', () => {
-        audioBtn.classList.toggle('off');
-        audioBtn.textContent = audioBtn.classList.contains('off') ? 'Audio on' : 'Audio off';
-      });
-    }
+    const progress = document.getElementById('scroll-progress');
+    const updateProgress = () => {
+      const h = document.documentElement;
+      const scrolled = h.scrollTop || document.body.scrollTop;
+      const height = h.scrollHeight - h.clientHeight;
+      const pct = height ? Math.round((scrolled / height) * 100) : 0;
+      progress.textContent = pct + '%';
+    };
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
   </script>
 </body>
 </html>

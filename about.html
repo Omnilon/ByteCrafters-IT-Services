@@ -5,43 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ByteCrafters IT Services | About</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body class="page-about">
   <header class="site-header">
-    <div class="brand">ByteCrafters</div>
+    <div class="brand"><img class="brand-logo" src="assets/logo.png" alt="ByteCrafters logo">ByteCrafters</div>
     <nav class="primary-nav">
-      <a href="index.html" data-page="index">Explore</a>
-      <a href="about.html" data-page="about">Story</a>
-      <a href="services.html" data-page="services">Services</a>
-      <a href="mission.html" data-page="mission">Mission</a>
-      <a href="leadership.html" data-page="leadership">Guides</a>
-      <a href="careers.html" data-page="careers">Careers</a>
-      <a href="contact.html" data-page="contact">Contact</a>
-      <a href="consult.html" data-page="consult">Inquire</a>
+      <a href="index.html" data-page="index">[ command ]</a>
+      <a href="about.html" data-page="about">about</a>
+      <a href="services.html" data-page="services">programs</a>
+      <a href="mission.html" data-page="mission">mission</a>
+      <a href="leadership.html" data-page="leadership">team</a>
+      <a href="careers.html" data-page="careers">careers</a>
+      <a href="contact.html" data-page="contact">contact</a>
+      <a href="consult.html" data-page="consult">consult</a>
     </nav>
-    <a class="inquire-btn" href="consult.html">Inquire</a>
   </header>
-  <button class="audio-toggle" type="button">Audio off</button>
-  <main class="storybook">
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80');">
-  <div class="hero-content">
-    <h1>Crafted in the Blue Ridge.</h1>
-    <p>ByteCrafters was founded by systems engineers who wanted service that felt more like a guide and less like a help desk.</p>
+  <div class="progress" id="scroll-progress">0%</div>
+  <main>
+    <section class="hero">
+  <div>
+    <div class="bracket">[ about ]</div>
+    <h1>Built by operators for operators.</h1>
   </div>
+  <div>
+    <p>ByteCrafters started as a network engineering shop and evolved into a full-service IT operations partner for growth-stage companies.</p>
+  </div>
+  <div class="hero-media" style="background-image: url('assets/hero-2.png');"></div>
 </section>
-<section class="section">
-  <h2>Our story</h2>
-  <p>From day one we have paired technical rigor with hospitality. We serve growth-stage teams across the Southeast and beyond, building long-term IT stewardship.</p>
-</section>
-<section class="section">
-  <h2>Principles</h2>
-  <div class="map">
-    <div class="map-card"><span>Stewardship</span><p>We treat every system as if it powers our own work.</p></div>
-    <div class="map-card"><span>Clarity</span><p>Plain-language reporting with clear next steps.</p></div>
-    <div class="map-card"><span>Momentum</span><p>We keep momentum through proactive maintenance.</p></div>
+<section>
+  <div class="bracket">[ milestones ]</div>
+  <div class="grid">
+    <div class="card"><h3>2012</h3><p>Launched our first 24/7 command desk for SaaS teams.</p></div>
+    <div class="card"><h3>2018</h3><p>Expanded into cloud governance and security operations.</p></div>
+    <div class="card"><h3>2024</h3><p>Introduced proactive compliance monitoring for regulated clients.</p></div>
   </div>
 </section>
   </main>
+  <div class="ticker">
+    <div class="ticker-track">BYTECRAFTERS // COMMAND CENTER // SECURITY CORE // BYTECRAFTERS // COMMAND CENTER // SECURITY CORE //</div>
+  </div>
   <footer class="site-footer">
     <div>
       ByteCrafters IT Services<br>
@@ -57,15 +60,17 @@
       Response SLA: 30 minutes
     </div>
   </footer>
-
   <script>
-    const audioBtn = document.querySelector('.audio-toggle');
-    if (audioBtn) {
-      audioBtn.addEventListener('click', () => {
-        audioBtn.classList.toggle('off');
-        audioBtn.textContent = audioBtn.classList.contains('off') ? 'Audio on' : 'Audio off';
-      });
-    }
+    const progress = document.getElementById('scroll-progress');
+    const updateProgress = () => {
+      const h = document.documentElement;
+      const scrolled = h.scrollTop || document.body.scrollTop;
+      const height = h.scrollHeight - h.clientHeight;
+      const pct = height ? Math.round((scrolled / height) * 100) : 0;
+      progress.textContent = pct + '%';
+    };
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
   </script>
 </body>
 </html>
